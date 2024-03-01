@@ -26,3 +26,10 @@ git pull origin main
 git submodule init
 git submodule update
 ```
+
+## Tmux plugins install
+1. In a tmux session, press `prefix` + `I` (capital i, as in Install) to fetch
+the plugin.
+
+## Nvim plugins install
+1. Nvim plugins will automaticall install upon launch.
