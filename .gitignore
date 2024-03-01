@@ -1,5 +1,7 @@
 # Ignore everything except the files/folders I specified
 *
 !.gitignore
+!.gitmodules
 !.config/nvim/
 !.tmux.config
+!README.md
