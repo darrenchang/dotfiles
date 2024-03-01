@@ -20,6 +20,8 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 cd ~/
 git init
 git remote add origin git@github.com:darrenchang/dotfiles.git
+git checkout -b main
+git branch --set-upstream-to=origin/main main
 git pull origin main
 
 # Initialize and pull submodules
