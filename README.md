@@ -21,8 +21,8 @@ cd ~/
 git init
 git remote add origin git@github.com:darrenchang/dotfiles.git
 git checkout -b main
-git branch --set-upstream-to=origin/main main
 git pull origin main
+git branch --set-upstream-to=origin/main main
 
 # Initialize and pull submodules
 git submodule init
