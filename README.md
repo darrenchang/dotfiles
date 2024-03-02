@@ -27,9 +27,6 @@ rm -rf .zshrc
 # Install zsh powerlevel10k theme
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 
-# Clone Tmux Plugin Manager
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-
 # Initialize git at `~/` and pull
 cd ~/
 git init
@@ -44,7 +41,8 @@ git submodule update
 ```
 
 ## Tmux plugins install
-1. Tmux plugins will automatically install upon launch.
+1. Tmux plugins will automatically install upon launch. In a tmux session, press `prefix` + `I` (capital i, as in 
+Install) to fetch the plugin
 
 ## Nvim plugins install
 1. Nvim plugins will automatically install upon launch.
