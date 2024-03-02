@@ -8,6 +8,9 @@ rm -rf .gitignore
 rm -rf .gitmodules
 rm -rf .config/nvim
 rm -rf .tmux.conf
+rm -rf .tmux-platform-icon.sh
+rm -rf .tmux-copy-to-clipboard.sh
+rm -rf .tmux-mouse-monitor.sh
 rm -rf .tmux/
 rm -rf .local/share/nvim
 rm -rf .git
@@ -30,8 +33,7 @@ git submodule update
 ```
 
 ## Tmux plugins install
-1. In a tmux session, press `prefix` + `I` (capital i, as in Install) to fetch
-the plugin.
+1. Tmux plugins will automatically install upon launch.
 
 ## Nvim plugins install
-1. Nvim plugins will automaticall install upon launch.
+1. Nvim plugins will automatically install upon launch.
