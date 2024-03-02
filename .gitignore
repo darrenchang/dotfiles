@@ -2,6 +2,8 @@
 *
 !.gitignore
 !.gitmodules
+!.zshrc
+!.p10k.zsh
 !.tmux.config
 !.tmux-platform-icon.sh
 !.tmux-copy-to-clipboard.sh
