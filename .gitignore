@@ -5,4 +5,5 @@
 !.config/nvim/
 !.tmux.config
 !.tmux-platform-icon.sh
+!.tmux-copy-to-clipboard.sh
 !README.md
