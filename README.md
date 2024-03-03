@@ -1,7 +1,10 @@
-## My dotfile!
+# My dotfile!
 For me.
 
-## How to set up
+## Screenshots
+<img width="1440" alt="screenshot" src="https://github.com/darrenchang/dotfiles/assets/10385811/78d89d0e-5d32-4c2a-9fca-b2c83f781c37">
+
+# How to set up
 ```bash
 setopt interactivecomments
 
@@ -43,9 +46,9 @@ git submodule init
 git submodule update
 ```
 
-## Tmux plugins install
+# Tmux plugins install
 1. Tmux plugins will automatically install upon launch. In a tmux session, press `prefix` + `I` (capital i, as in 
 Install) to fetch the plugin
 
-## Nvim plugins install
+# Nvim plugins install
 1. Nvim plugins will automatically install upon launch.
