@@ -111,5 +111,7 @@ source $ZSH/oh-my-zsh.sh
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # My custom config
+unsetopt SHARE_HISTORY
+setopt INC_APPEND_HISTORY
 ZLE_RPROMPT_INDENT=0
 export PATH=/opt/homebrew/bin:$PATH
