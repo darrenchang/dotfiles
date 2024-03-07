@@ -4,6 +4,12 @@ For me.
 ## Screenshots
 <img width="1440" alt="screenshot" src="https://github.com/darrenchang/dotfiles/assets/10385811/78d89d0e-5d32-4c2a-9fca-b2c83f781c37">
 
+# Requirements
+Packages that should be installed on the host for this to work as expected.
+- tmux <https://github.com/tmux/tmux>
+- neovim <https://github.com/neovim/neovim>
+- ripgrep <https://github.com/BurntSushi/ripgrep>
+
 # How to set up
 ```bash
 setopt interactivecomments
