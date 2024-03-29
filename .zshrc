@@ -115,5 +115,6 @@ unsetopt SHARE_HISTORY
 setopt INC_APPEND_HISTORY
 ZLE_RPROMPT_INDENT=0
 export PATH=/opt/homebrew/bin:$PATH
+export PATH=.local/share/mybin/nvim/usr/bin:$PATH
 export LANGUAGE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
