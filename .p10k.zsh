@@ -67,7 +67,6 @@
     gcloud                  # google cloud cli account and project (https://cloud.google.com/)
     google_app_cred         # google application credentials (https://cloud.google.com/docs/authentication/production)
     toolbox                 # toolbox name (https://github.com/containers/toolbox)
-    context                 # user@hostname
     nordvpn                 # nordvpn connection status, linux only (https://nordvpn.com/)
     ranger                  # ranger shell (https://github.com/ranger/ranger)
     yazi                    # yazi shell (https://github.com/sxyazi/yazi)
@@ -91,6 +90,7 @@
     time
     command_execution_time  # duration of the last command
     status                  # exit code of the last command
+    context                 # user@hostname
     # =========================[ Line #2 ]=========================
     newline                 # \n
     prompt_char             # prompt symbol
@@ -1842,7 +1842,7 @@
           p10k segment -b 2 -f 0 -i ""
           ;;
         'off')
-          p10k segment -b 10 -f 0 -i "󱗽"
+          p10k segment -b 2 -f 0 -i "󱗽"
           ;;
       esac
     fi
