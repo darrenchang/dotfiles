@@ -9,6 +9,7 @@ Packages that should be installed on the host for this to work as expected.
 - tmux <https://github.com/tmux/tmux>
 - neovim <https://github.com/neovim/neovim>
 - ripgrep <https://github.com/BurntSushi/ripgrep>
+- tmux plugin manager: <https://github.com/tmux-plugins/tpm>
 
 # How to set up
 ```bash
