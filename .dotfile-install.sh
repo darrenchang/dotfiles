@@ -7,6 +7,7 @@ rm -rf .oh-my-zsh/
 rm -rf .gitignore
 rm -rf .gitmodules
 rm -rf .config/nvim
+rm -rf .dotfile-install.sh
 rm -rf .tmux.conf
 rm -rf .tmux-platform-icon.sh
 rm -rf .tmux-copy-to-clipboard.sh
