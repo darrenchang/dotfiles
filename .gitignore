@@ -5,6 +5,7 @@
 !.zshrc
 !.p10k.zsh
 !.tmux.config
+!.dotfile-install.sh
 !.tmux-platform-icon.sh
 !.tmux-copy-to-clipboard.sh
 !.tmux-mouse-monitor.sh
