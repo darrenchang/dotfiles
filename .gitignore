@@ -11,3 +11,5 @@
 !.tmux-mouse-monitor.sh
 !README.md
 !.config/nvim/
+!.config/ghostty/
+!.config/skhd/
