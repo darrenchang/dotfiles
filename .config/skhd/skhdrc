@@ -111,8 +111,8 @@ cmd + shift - k : open -a 'ghostty'
 cmd + shift - g : open -a 'google chrome'
 cmd + shift - d : open -a discord
 cmd + shift - l : open -a line
-cmd + shift - e : open ~/
 cmd + shift - m : open -a 'iphone mirroring'
+cmd + shift - b : open -a 'obsidian'
 
 # open qutebrowser
 # cmd + shift - return : ~/Scripts/qtb.sh
