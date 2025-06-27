@@ -1,0 +1,12 @@
+# Empty values reset the configuration to the default value
+# The syntax is "key = value". The whitespace around the
+# equals doesn't matter.
+background = 000000
+foreground = ffffff
+cursor-color = 00fff0
+cursor-text = 000000
+theme = dark pastel
+mouse-hide-while-typing = true
+macos-titlebar-proxy-icon = hidden
+font-family = FiraMono Nerd Font
+mouse-scroll-multiplier = 1
