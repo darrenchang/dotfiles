@@ -8,5 +8,6 @@
 !.tmux-platform-icon.sh
 !.tmux-copy-to-clipboard.sh
 !.tmux-mouse-monitor.sh
+!.tmux-clients.sh
 !README.md
 !.config/nvim/
