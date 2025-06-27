@@ -32,7 +32,7 @@
   # The list of segments shown on the left. Fill it with the most important segments.
   typeset -g POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(
     # =========================[ Line #1 ]=========================
-    tmux_session_info       # tmux info
+    tmux_client_info        # tmux info
     os_icon                 # os identifier
     cpu_arch
     dir                     # current directory
@@ -1847,6 +1847,41 @@
       esac
     fi
   }
+  function prompt_tmux_client_info() {
+    TMUX_ICON=""
+    if [ -n "${TMUX}" ]; then
+      case $(tmux show -gv status) in
+        'on')
+          TMUX_ICON=""
+          ;;
+        'off')
+          TMUX_ICON="󱗽"
+          ;;
+      esac
+    fi
+    clients=()
+    for line in ${(f)"$(tmux list-clients -F '#{client_tty} #{session_name}')"}; do
+      [[ -n "$line" ]] && clients+=("$line")
+    done
+    TMUX_CLIENTS=0
+    SSH_CLIENTS=$(who | awk '
+    {
+      # Find the field containing the IP address in parentheses
+      for(i=1; i<=NF; i++) {
+        if ($i ~ /^\([0-9]+\.[0-9]+\.[0-9]+\.[0-9]+\)$/) {
+          ip = $i
+          gsub(/[()]/, "", ip)
+          print ip
+        }
+      }
+    }
+    ')
+    N_SSH_CLIENTS=$(echo ${SSH_CLIENTS} | wc -w | tr -d ' ')
+    for line in "${clients[@]}"; do
+      ((TMUX_CLIENTS++))
+    done
+    p10k segment -b 2 -f 0 -i "${TMUX_ICON} ${TMUX_CLIENTS}  ${N_SSH_CLIENTS}"
+    }
 
   # User-defined prompt segments may optionally provide an instant_prompt_* function. Its job
   # is to generate the prompt segment for display in instant prompt. See

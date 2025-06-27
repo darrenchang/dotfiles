@@ -55,6 +55,4 @@ for line in "${clients[@]}"; do
   fi
 done
 
-if [[ "$TMUX_CLIENTS" -gt 1 || "$N_SSH_CLIENTS" -gt 1 ]]; then
-  echo "  ${TMUX_CLIENTS}  $N_SSH_CLIENTS"
-fi
+echo "  ${TMUX_CLIENTS}  $N_SSH_CLIENTS"
