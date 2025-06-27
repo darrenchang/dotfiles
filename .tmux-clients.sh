@@ -55,4 +55,4 @@ for line in "${clients[@]}"; do
   fi
 done
 
-echo "  ${TMUX_CLIENTS}  $N_SSH_CLIENTS"
+echo " ${TMUX_CLIENTS}  $N_SSH_CLIENTS"
