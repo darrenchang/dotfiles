@@ -54,5 +54,11 @@ for line in "${clients[@]}"; do
     printf "Session: %-20s TTY: %-12s IP: %s\n" "$session" "$tty" "${ip:-LOCAL}"
   fi
 done
+if [[ "$ONLY_N" == "false" ]]; then
+  echo ""
+  echo "SSH Clients"
+  echo "${SSH_CLIENTS}"
+  echo ""
+fi
 
 echo " ${TMUX_CLIENTS}  $N_SSH_CLIENTS"
