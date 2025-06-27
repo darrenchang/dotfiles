@@ -32,8 +32,19 @@ done < <(who)
 # Get tmux client info: TTY and session name
 mapfile -t clients < <(tmux list-clients -F "#{client_tty} #{session_name}")
 TMUX_CLIENTS=0
-SSH_CLIENTS=$(who | awk '{gsub(/[()]/, "", $5); if ($5 ~ /^[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+$/) print $5}')
-N_SSH_CLIENTS=$(echo ${SSH_CLIENTS} | wc -w)
+SSH_CLIENTS=$(who | awk '
+{
+  # Find the field containing the IP address in parentheses
+  for(i=1; i<=NF; i++) {
+    if ($i ~ /^\([0-9]+\.[0-9]+\.[0-9]+\.[0-9]+\)$/) {
+      ip = $i
+      gsub(/[()]/, "", ip)
+      print ip
+    }
+  }
+}
+')
+N_SSH_CLIENTS=$(echo ${SSH_CLIENTS} | wc -w | tr -d ' ')
 
 for line in "${clients[@]}"; do
   read -r tty session <<< "$line"
@@ -45,5 +56,5 @@ for line in "${clients[@]}"; do
 done
 
 if [[ "$TMUX_CLIENTS" -gt 1 || "$N_SSH_CLIENTS" -gt 1 ]]; then
-  echo " (${TMUX_CLIENTS}/${N_SSH_CLIENTS})"
+  echo "  ${TMUX_CLIENTS}  $N_SSH_CLIENTS"
 fi
