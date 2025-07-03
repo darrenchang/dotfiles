@@ -4,10 +4,10 @@ PLATFORM=$(uname -s)
 
 case $PLATFORM in
     'Linux')
-        tmux show-buffer | xclip -selection clipboard
+        tmux show-buffer | sed 's/▎/ /g' | xclip -selection clipboard
         ;;
     'Darwin')
-        tmux show-buffer | pbcopy
+        tmux show-buffer | sed 's/▎/ /g' | pbcopy
         ;;
     *)
         echo "message"
