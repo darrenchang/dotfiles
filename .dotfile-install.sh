@@ -37,8 +37,8 @@ curl -L -o lazygit.tar.gz https://github.com/jesseduffield/lazygit/releases/down
 rm -rf ~/tmp-lazygit
 mkdir -p ~/tmp-lazygit
 tar -xzf lazygit.tar.gz -C ~/tmp-lazygit
-mkdir -p ~/.local/share/mybin/lazygit/usr/
-cp -r ~/tmp-lazygit/* ~/.local/share/mybin/lazygit/usr/
+mkdir -p ~/.local/share/mybin/lazygit/usr/bin/
+cp -r ~/tmp-lazygit/* ~/.local/share/mybin/lazygit/usr/bin/
 rm -rf ~/tmp-lazygit
 rm -f lazygit.tar.gz
 
