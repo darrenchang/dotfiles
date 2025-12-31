@@ -27,6 +27,8 @@ mkdir -p ~/tmp-nvim
 tar -xzf nvim.tar.gz -C ~/tmp-nvim --strip-components=1
 mkdir -p ~/.local/share/mybin/nvim/usr/
 cp -r ~/tmp-nvim/* ~/.local/share/mybin/nvim/usr/
+rm -rf ~/tmp-nvim
+rm -f nvim.tar.gz
 
 # Install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
