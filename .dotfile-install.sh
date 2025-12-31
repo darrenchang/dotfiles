@@ -21,6 +21,8 @@ rm -rf .tmux-clients.sh
 rm -rf README.md
 
 # Install nvim
+sudo apt update
+sudo apt install luarocks npm
 curl -L -o nvim.tar.gz https://github.com/neovim/neovim/releases/download/v0.11.5/nvim-linux-arm64.tar.gz
 rm -rf ~/tmp-nvim
 mkdir -p ~/tmp-nvim
