@@ -15,6 +15,9 @@ rm -rf .tmux-mouse-monitor.sh
 rm -rf .tmux/
 rm -rf .local/share/nvim
 rm -rf .git
+rm -rf .config/ghostty/config
+rm -rf .config/skhd/skhdrc
+rm -rf .tmux-clients.sh
 rm -rf README.md
 
 # Install oh-my-zsh
