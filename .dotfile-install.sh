@@ -22,6 +22,7 @@ rm -rf README.md
 
 # Install nvim
 curl -L -o nvim.tar.gz https://github.com/neovim/neovim/releases/download/v0.11.5/nvim-linux-arm64.tar.gz
+rm -rf ~/tmp-nvim
 mkdir -p ~/tmp-nvim
 tar -xzf nvim.tar.gz -C ~/tmp-nvim --strip-components=1
 mkdir -p ~/.local/share/mybin/nvim/
