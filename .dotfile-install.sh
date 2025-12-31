@@ -25,8 +25,8 @@ curl -L -o nvim.tar.gz https://github.com/neovim/neovim/releases/download/v0.11.
 rm -rf ~/tmp-nvim
 mkdir -p ~/tmp-nvim
 tar -xzf nvim.tar.gz -C ~/tmp-nvim --strip-components=1
-mkdir -p ~/.local/share/mybin/nvim/
-cp -r ~/tmp-nvim/* ~/.local/share/mybin/nvim/
+mkdir -p ~/.local/share/mybin/nvim/usr/
+cp -r ~/tmp-nvim/* ~/.local/share/mybin/nvim/usr/
 
 # Install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
