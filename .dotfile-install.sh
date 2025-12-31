@@ -20,6 +20,13 @@ rm -rf .config/skhd/skhdrc
 rm -rf .tmux-clients.sh
 rm -rf README.md
 
+# Install nvim
+curl -L -o nvim.tar.gz https://github.com/neovim/neovim/releases/download/v0.11.5/nvim-linux-arm64.tar.gz
+mkdir ~/tmp-nvim
+tar -xzf nvim.tar.gz -C ~/tmp-nvim --strip-components=1
+mkdir -p ~/.local/share/mybin/
+cp -r ~/tmp-nvim/* ~/.local/share/mybin/
+
 # Install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 rm -rf .zshrc
