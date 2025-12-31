@@ -32,6 +32,16 @@ cp -r ~/tmp-nvim/* ~/.local/share/mybin/nvim/usr/
 rm -rf ~/tmp-nvim
 rm -f nvim.tar.gz
 
+# Install laygit
+curl -L -o lazygit.tar.gz https://github.com/jesseduffield/lazygit/releases/download/v0.57.0/lazygit_0.57.0_linux_arm64.tar.gz
+rm -rf ~/tmp-lazygit
+mkdir -p ~/tmp-lazygit
+tar -xzf lazygit.tar.gz -C ~/tmp-lazygit --strip-components=1
+mkdir -p ~/.local/share/mybin/lazygit/usr/
+cp -r ~/tmp-lazygit/* ~/.local/share/mybin/lazygit/usr/
+rm -rf ~/tmp-lazygit
+rm -f lazygit.tar.gz
+
 # Install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 rm -rf .zshrc
