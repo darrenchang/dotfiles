@@ -119,6 +119,9 @@ export PATH=~/.local/share/mybin/nvim/usr/bin:$PATH
 export PATH=~/.local/share/mybin/lazygit/usr/bin:$PATH
 export LANGUAGE=en_US.UTF-8
 
+# Local installations
+export PATH=~/.local/bin:$PATH
+
 # MacOS virt-manager config
 export DYLD_LIBRARY_PATH=$(brew --prefix)/lib:$DYLD_LIBRARY_PATH
 export GI_TYPELIB_PATH=$(brew --prefix)/lib/girepository-1.0
