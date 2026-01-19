@@ -118,4 +118,10 @@ export PATH=/opt/homebrew/bin:$PATH
 export PATH=~/.local/share/mybin/nvim/usr/bin:$PATH
 export PATH=~/.local/share/mybin/lazygit/usr/bin:$PATH
 export LANGUAGE=en_US.UTF-8
+
+# MacOS virt-manager config
+export DYLD_LIBRARY_PATH=$(brew --prefix)/lib:$DYLD_LIBRARY_PATH
+export GI_TYPELIB_PATH=$(brew --prefix)/lib/girepository-1.0
+export GST_PLUGIN_PATH=$(brew --prefix)/lib/gstreamer-1.0
+export XDG_DATA_DIRS=$(brew --prefix)/share:$XDG_DATA_DIRS
 export LC_ALL=en_US.UTF-8
