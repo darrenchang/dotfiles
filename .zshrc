@@ -123,8 +123,11 @@ export LANGUAGE=en_US.UTF-8
 export PATH=~/.local/bin:$PATH
 
 # MacOS virt-manager config
-export DYLD_LIBRARY_PATH=$(brew --prefix)/lib:$DYLD_LIBRARY_PATH
-export GI_TYPELIB_PATH=$(brew --prefix)/lib/girepository-1.0
-export GST_PLUGIN_PATH=$(brew --prefix)/lib/gstreamer-1.0
-export XDG_DATA_DIRS=$(brew --prefix)/share:$XDG_DATA_DIRS
+if [[ "$(uname)" == "Darwin" ]]; then
+  export DYLD_LIBRARY_PATH=$(brew --prefix)/lib:$DYLD_LIBRARY_PATH
+  export GI_TYPELIB_PATH=$(brew --prefix)/lib/girepository-1.0
+  export GST_PLUGIN_PATH=$(brew --prefix)/lib/gstreamer-1.0
+  export XDG_DATA_DIRS=$(brew --prefix)/share:$XDG_DATA_DIRS
+fi
+
 export LC_ALL=en_US.UTF-8
