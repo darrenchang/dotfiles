@@ -15,7 +15,32 @@ rm -rf .tmux-mouse-monitor.sh
 rm -rf .tmux/
 rm -rf .local/share/nvim
 rm -rf .git
+rm -rf .config/ghostty/config
+rm -rf .config/skhd/skhdrc
+rm -rf .tmux-clients.sh
 rm -rf README.md
+
+# Install nvim
+sudo apt update
+sudo apt install luarocks npm
+curl -L -o nvim.tar.gz https://github.com/neovim/neovim/releases/download/v0.11.5/nvim-linux-arm64.tar.gz
+rm -rf ~/tmp-nvim
+mkdir -p ~/tmp-nvim
+tar -xzf nvim.tar.gz -C ~/tmp-nvim --strip-components=1
+mkdir -p ~/.local/share/mybin/nvim/usr/
+cp -r ~/tmp-nvim/* ~/.local/share/mybin/nvim/usr/
+rm -rf ~/tmp-nvim
+rm -f nvim.tar.gz
+
+# Install laygit
+curl -L -o lazygit.tar.gz https://github.com/jesseduffield/lazygit/releases/download/v0.57.0/lazygit_0.57.0_linux_arm64.tar.gz
+rm -rf ~/tmp-lazygit
+mkdir -p ~/tmp-lazygit
+tar -xzf lazygit.tar.gz -C ~/tmp-lazygit
+mkdir -p ~/.local/share/mybin/lazygit/usr/bin/
+cp -r ~/tmp-lazygit/* ~/.local/share/mybin/lazygit/usr/bin/
+rm -rf ~/tmp-lazygit
+rm -f lazygit.tar.gz
 
 # Install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
