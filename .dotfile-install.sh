@@ -20,7 +20,7 @@ rm -rf .git && \
 rm -rf .config/ghostty/config && \
 rm -rf .config/skhd/skhdrc && \
 rm -rf .tmux-clients.sh && \
-rm -rf README.md && \
+rm -rf README.md;
 
 # Install nvim
 sudo apt update && \
@@ -32,7 +32,7 @@ tar -xzf nvim.tar.gz -C ~/tmp-nvim --strip-components=1 && \
 mkdir -p ~/.local/share/mybin/nvim/usr/ && \
 cp -r ~/tmp-nvim/* ~/.local/share/mybin/nvim/usr/ && \
 rm -rf ~/tmp-nvim && \
-rm -f nvim.tar.gz && \
+rm -f nvim.tar.gz;
 
 # Install laygit
 curl -L -o lazygit.tar.gz https://github.com/jesseduffield/lazygit/releases/download/v0.57.0/lazygit_0.57.0_linux_arm64.tar.gz && \
@@ -42,21 +42,21 @@ tar -xzf lazygit.tar.gz -C ~/tmp-lazygit && \
 mkdir -p ~/.local/share/mybin/lazygit/usr/bin/ && \
 cp -r ~/tmp-lazygit/* ~/.local/share/mybin/lazygit/usr/bin/ && \
 rm -rf ~/tmp-lazygit && \
-rm -f lazygit.tar.gz && \
+rm -f lazygit.tar.gz;
 
 # Install oh-my-zsh
 sudo apt install -y zsh && \
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended && \
 rm -rf .zshrc && \
 # Install zsh powerlevel10k theme
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k && \
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k;
 # Install zsh plugins
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting && \
-git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions && \
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions;
 
 # Install docker autocompletion
 mkdir -p ~/.oh-my-zsh/plugins/docker/ && \
-curl -fLo ~/.oh-my-zsh/plugins/docker/_docker https://raw.githubusercontent.com/docker/cli/master/contrib/completion/zsh/_docker && \
+curl -fLo ~/.oh-my-zsh/plugins/docker/_docker https://raw.githubusercontent.com/docker/cli/master/contrib/completion/zsh/_docker;
 
 # Initialize git at `~/` and pull
 ( \
