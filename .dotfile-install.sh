@@ -45,7 +45,7 @@ rm -rf ~/tmp-lazygit && \
 rm -f lazygit.tar.gz && \
 
 # Install oh-my-zsh
-sudo apt install -y zsh \
+sudo apt install -y zsh && \
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended && \
 rm -rf .zshrc && \
 # Install zsh powerlevel10k theme
