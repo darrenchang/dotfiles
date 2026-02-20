@@ -1860,7 +1860,7 @@
       esac
     fi
     clients=()
-    for line in ${(f)"$(tmux list-clients -F '#{client_tty} #{session_name}')"}; do
+    for line in ${(f)"$(tmux list-clients -F '#{client_tty} #{session_name}' 2>/dev/null)"}; do
       [[ -n "$line" ]] && clients+=("$line")
     done
     TMUX_CLIENTS=0
