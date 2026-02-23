@@ -22,27 +22,68 @@ rm -rf .config/skhd/skhdrc && \
 rm -rf .tmux-clients.sh && \
 rm -rf README.md;
 
+OS_NAME=$(uname -s);
+OS_ARCH=$(uname -m);
+
 # Install nvim
-sudo apt update && \
-sudo apt install -y luarocks npm && \
-curl -L -o nvim.tar.gz https://github.com/neovim/neovim/releases/download/v0.11.5/nvim-linux-arm64.tar.gz && \
-rm -rf ~/tmp-nvim && \
-mkdir -p ~/tmp-nvim && \
-tar -xzf nvim.tar.gz -C ~/tmp-nvim --strip-components=1 && \
-mkdir -p ~/.local/share/mybin/nvim/usr/ && \
-cp -r ~/tmp-nvim/* ~/.local/share/mybin/nvim/usr/ && \
-rm -rf ~/tmp-nvim && \
-rm -f nvim.tar.gz;
+case "$OS_NAME" in
+  "Linux")
+    case "$OS_ARCH" in
+      "x86_64")
+        NVIM_ARCH="x86_64"
+        ;;
+      "aarch64")
+        NVIM_ARCH="arm64"
+        ;;
+    esac
+    NVIM_VERSION="v0.11.5";
+    sudo apt update && \
+    sudo apt install -y luarocks npm && \
+    curl -L -o nvim.tar.gz https://github.com/neovim/neovim/releases/download/${NVIM_VERSION}/nvim-linux-${NVIM_ARCH}.tar.gz && \
+    rm -rf ~/tmp-nvim && \
+    mkdir -p ~/tmp-nvim && \
+    tar -xzf nvim.tar.gz -C ~/tmp-nvim --strip-components=1 && \
+    mkdir -p ~/.local/share/mybin/nvim/usr/ && \
+    cp -r ~/tmp-nvim/* ~/.local/share/mybin/nvim/usr/ && \
+    rm -rf ~/tmp-nvim && \
+    rm -f nvim.tar.gz;
+    ;;
+  "Darwin")
+    brew install nvim;
+    ;;
+  *)
+    echo "Nvim not available for the current platform ${OS_NAME} ${OS_ARCH}"
+    ;;
+esac
 
 # Install laygit
-curl -L -o lazygit.tar.gz https://github.com/jesseduffield/lazygit/releases/download/v0.57.0/lazygit_0.57.0_linux_arm64.tar.gz && \
-rm -rf ~/tmp-lazygit && \
-mkdir -p ~/tmp-lazygit && \
-tar -xzf lazygit.tar.gz -C ~/tmp-lazygit && \
-mkdir -p ~/.local/share/mybin/lazygit/usr/bin/ && \
-cp -r ~/tmp-lazygit/* ~/.local/share/mybin/lazygit/usr/bin/ && \
-rm -rf ~/tmp-lazygit && \
-rm -f lazygit.tar.gz;
+case "$OS_NAME" in
+  "Linux")
+    case "$OS_ARCH" in
+      "x86_64")
+        LAZYGIT_ARCH="x86_64"
+        ;;
+      "aarch64")
+        LAZYGIT_ARCH="arm64"
+        ;;
+    esac
+    LAZYGIT_VERSION="0.57.0";
+    curl -L -o lazygit.tar.gz https://github.com/jesseduffield/lazygit/releases/download/v${LAZYGIT_VERSION}/lazygit_${LAZYGIT_VERSION}_linux_${LAZYGIT_ARCH}.tar.gz && \
+    rm -rf ~/tmp-lazygit && \
+    mkdir -p ~/tmp-lazygit && \
+    tar -xzf lazygit.tar.gz -C ~/tmp-lazygit && \
+    mkdir -p ~/.local/share/mybin/lazygit/usr/bin/ && \
+    cp -r ~/tmp-lazygit/* ~/.local/share/mybin/lazygit/usr/bin/ && \
+    rm -rf ~/tmp-lazygit && \
+    rm -f lazygit.tar.gz;
+    ;;
+  "Darwin")
+    brew install lazygit;
+    ;;
+  *)
+    echo "Nvim not available for the current platform ${OS_NAME} ${OS_ARCH}"
+    ;;
+esac
 
 # Install oh-my-zsh
 sudo apt install -y zsh && \
