@@ -36,7 +36,7 @@ case "$OS_NAME" in
         NVIM_ARCH="arm64"
         ;;
     esac
-    NVIM_VERSION="v0.11.5";
+    NVIM_VERSION="v0.11.6";
     sudo apt update && \
     sudo apt install -y luarocks npm && \
     curl -L -o nvim.tar.gz https://github.com/neovim/neovim/releases/download/${NVIM_VERSION}/nvim-linux-${NVIM_ARCH}.tar.gz && \
