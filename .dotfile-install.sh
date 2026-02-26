@@ -38,7 +38,7 @@ case "$OS_NAME" in
     esac
     NVIM_VERSION="v0.11.6";
     sudo apt update && \
-    sudo apt install -y luarocks npm && \
+    sudo apt install -y luarocks npm python3-venv && \
     curl -L -o nvim.tar.gz https://github.com/neovim/neovim/releases/download/${NVIM_VERSION}/nvim-linux-${NVIM_ARCH}.tar.gz && \
     rm -rf ~/tmp-nvim && \
     mkdir -p ~/tmp-nvim && \
@@ -107,9 +107,8 @@ curl -fLo ~/.oh-my-zsh/plugins/docker/_docker https://raw.githubusercontent.com/
   git checkout -b main && \
   git pull origin main && \
   git branch --set-upstream-to=origin/main main; \
-) &&
-
-# Initialize and pull submodules
-git submodule init && \
-git submodule update;
+  # Initialize and pull submodules
+  git submodule init && \
+  git submodule update;
+)
 
