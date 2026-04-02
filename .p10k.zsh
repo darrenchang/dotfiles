@@ -34,9 +34,9 @@
     # =========================[ Line #1 ]=========================
     tmux_client_info        # tmux info
     os_icon                 # os identifier
-    cpu_arch
+    # cpu_arch
     dir                     # current directory
-    vcs                     # git status
+    # vcs                     # git status
     # =========================[ Line #1 ]=========================
     background_jobs         # presence of background jobs
     direnv                  # direnv status (https://direnv.net/)
@@ -87,7 +87,7 @@
     timewarrior             # timewarrior tracking status (https://timewarrior.net/)
     taskwarrior             # taskwarrior task count (https://taskwarrior.org/)
     per_directory_history   # Oh My Zsh per-directory-history local/global indicator
-    time
+    # time
     command_execution_time  # duration of the last command
     status                  # exit code of the last command
     context                 # user@hostname
