@@ -252,6 +252,9 @@
   # Custom icon.
   # typeset -g POWERLEVEL9K_OS_ICON_CONTENT_EXPANSION='⭐'
 
+  #################################[ tmux_session_info ]########################################
+  typeset -g POWERLEVEL9K_TMUX_CLIENT_INFO_LEFT_{LEFT,RIGHT}_WHITESPACE=
+
   ################################[ prompt_char: prompt symbol ]################################
   # Transparent background.
   typeset -g POWERLEVEL9K_PROMPT_CHAR_BACKGROUND=
@@ -352,6 +355,8 @@
   # Enable special styling for non-writable and non-existent directories. See POWERLEVEL9K_LOCK_ICON
   # and POWERLEVEL9K_DIR_CLASSES below.
   typeset -g POWERLEVEL9K_DIR_SHOW_WRITABLE=v3
+
+  typeset -g POWERLEVEL9K_DIR_LEFT_RIGHT_WHITESPACE=
 
   # The default icon shown next to non-writable and non-existent directories when
   # POWERLEVEL9K_DIR_SHOW_WRITABLE is set to v3.
@@ -1042,6 +1047,7 @@
   typeset -g POWERLEVEL9K_CONTEXT_{REMOTE,REMOTE_SUDO}_TEMPLATE='%n@%m'
   # Default context format (no privileges, no SSH): user@hostname.
   typeset -g POWERLEVEL9K_CONTEXT_TEMPLATE='%n@%m'
+  typeset -g POWERLEVEL9K_CONTEXT_LEFT_RIGHT_WHITESPACE=
 
   # Don't show context unless running with privileges or in SSH.
   # Tip: Remove the next line to always show context.
