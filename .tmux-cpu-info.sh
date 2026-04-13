@@ -61,9 +61,9 @@ get_load() {
 main() {
   # storing the refresh rate in the variable RATE, default is 5
   cpu_percent=$(get_percent)
-  percent=$(printf '%.0f' $cpu_percent)
-  percent=$(normalize_len $percent 3)
-  echo "$percent%"
+  percent="$(printf '%.0f' $cpu_percent)%"
+  percent=$(normalize_len $percent 4)
+  echo "$percent"
 }
 
 # run main driver
