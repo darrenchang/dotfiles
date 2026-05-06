@@ -10,3 +10,5 @@ mouse-hide-while-typing = true
 macos-titlebar-proxy-icon = hidden
 font-family = FiraMono Nerd Font
 mouse-scroll-multiplier = 1
+custom-shader = ~/.config/ghostty/shaders/ripple_cursor.glsl
+custom-shader = ~/.config/ghostty/shaders/cursor_warp.glsl

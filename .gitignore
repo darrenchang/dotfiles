@@ -13,4 +13,6 @@
 !README.md
 !.config/nvim/
 !.config/ghostty/
+!.config/ghostty/shaders/ripple_cursor.glsl
+!.config/ghostty/shaders/cursor_warp.glsl
 !.config/skhd/
