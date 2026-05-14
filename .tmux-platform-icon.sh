@@ -14,4 +14,8 @@ case $PLATFORM in
         ;;
 esac
 
-echo "${ICON} $(hostname -s)"
+if [[ "${1}" == "no-hostname" ]]; then
+    echo "${ICON} "
+else
+    echo "${ICON} $(hostname -s)"
+fi
