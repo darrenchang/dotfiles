@@ -11,7 +11,9 @@ case "$(uname -s)" in
 
   Darwin)
     pagesize=$(pagesize)
-    used_pages=$(vm_stat | awk '/active|wired|compressor|speculative/ {gsub(/\./,""); sum+=$NF} END {print sum}')
+    total_pages=$(( $(sysctl -n hw.memsize) / pagesize ))
+    free_pages=$(vm_stat | awk '/^Pages free:|^Pages speculative:/ {gsub(/\./,""); sum+=$NF} END {print sum}')
+    used_pages=$(( total_pages - free_pages ))
     used_mb=$(( used_pages * pagesize / 1048576 ))
     total_mb=$(( $(sysctl -n hw.memsize) / 1048576 ))
 
