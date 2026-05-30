@@ -22,12 +22,12 @@ rm -rf .config/skhd/skhdrc && \
 rm -rf .tmux-clients.sh && \
 rm -rf README.md;
 
-OS_NAME=$(uname -s);
+OS_NAME=$(uname -o);
 OS_ARCH=$(uname -m);
 
 # Install nvim
 case "$OS_NAME" in
-  "Linux")
+  "GNU/Linux")
     case "$OS_ARCH" in
       "x86_64")
         NVIM_ARCH="x86_64"
@@ -58,7 +58,7 @@ esac
 
 # Install laygit
 case "$OS_NAME" in
-  "Linux")
+  "GNU/Linux")
     case "$OS_ARCH" in
       "x86_64")
         LAZYGIT_ARCH="x86_64"
