@@ -85,7 +85,7 @@ case "$OS_NAME" in
     brew install lazygit;
     ;;
   *)
-    echo "Nvim not available for the current platform ${OS_NAME} ${OS_ARCH}"
+    echo "Lazygit not available for the current platform ${OS_NAME} ${OS_ARCH}"
     ;;
 esac
 
