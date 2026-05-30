@@ -1854,6 +1854,9 @@
     fi
   }
   function prompt_tmux_client_info() {
+    if ! command -v who &>/dev/null; then
+      return;
+    fi
     TMUX_ICON=""
     if [ -n "${TMUX}" ]; then
       case $(tmux show -gv status) in
