@@ -14,10 +14,14 @@ rm -rf .tmux.conf && \
 rm -rf .tmux-platform-icon.sh && \
 rm -rf .tmux-copy-to-clipboard.sh && \
 rm -rf .tmux-mouse-monitor.sh && \
+rm -rf .tmux-cpu-info.sh && \
+rm -rf .tmux-ram-info.sh && \
 rm -rf .tmux/ && \
 rm -rf .local/share/nvim && \
 rm -rf .git && \
 rm -rf .config/ghostty/config && \
+rm -rf .config/ghostty/shaders/cursor_warp.glsl && \
+rm -rf .config/ghostty/shaders/ripple_cursor.glsl && \
 rm -rf .config/skhd/skhdrc && \
 rm -rf .tmux-clients.sh && \
 rm -rf README.md;
