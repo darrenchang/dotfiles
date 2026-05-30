@@ -52,6 +52,9 @@ case "$OS_NAME" in
     rm -rf ~/tmp-nvim && \
     rm -f nvim.tar.gz;
     ;;
+  "Android")
+    pkg install nvim;
+    ;;
   "Darwin")
     brew install nvim;
     ;;
@@ -81,6 +84,9 @@ case "$OS_NAME" in
     rm -rf ~/tmp-lazygit && \
     rm -f lazygit.tar.gz;
     ;;
+  "Android")
+    pkg install lazygit;
+    ;;
   "Darwin")
     brew install lazygit;
     ;;
@@ -89,19 +95,23 @@ case "$OS_NAME" in
     ;;
 esac
 
-# Install oh-my-zsh
+# Install ZSH
 case "$OS_NAME" in
   "GNU/Linux")
     sudo apt install -y zsh;
+    ;;
+  "Android")
+    pkg install zsh;
     ;;
   "Darwin")
     echo "ZSH is installed by default on ${OS_NAME} ${OS_ARCH}"
     ;;
   *)
-    echo "Lazygit not available for the current platform ${OS_NAME} ${OS_ARCH}"
+    echo "ZSH not available for the current platform ${OS_NAME} ${OS_ARCH}"
     ;;
 esac
 
+# Install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended && \
 # Install zsh powerlevel10k theme
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k;
