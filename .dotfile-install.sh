@@ -53,7 +53,7 @@ case "$OS_NAME" in
     rm -f nvim.tar.gz;
     ;;
   "Android")
-    pkg install nvim;
+    pkg install neovim;
     ;;
   "Darwin")
     brew install nvim;
