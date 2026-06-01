@@ -131,3 +131,8 @@ if [[ "$(uname)" == "Darwin" ]]; then
 fi
 
 export LC_ALL=en_US.UTF-8
+
+# Inherit bash configs if available
+if [ -f ~/.bashrc ]; then
+  source .bashrc 2&>1 /dev/null;
+fi
