@@ -112,7 +112,7 @@ source $ZSH/oh-my-zsh.sh
 
 # Inherit bash configs if available
 if [ -f ~/.bashrc ]; then
-  source .bashrc 2&>1 /dev/null;
+  source .bashrc > /dev/null 2>&1;
 fi
 
 # My custom config
