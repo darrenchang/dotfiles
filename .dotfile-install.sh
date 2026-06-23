@@ -128,7 +128,8 @@ curl -fLo ~/.oh-my-zsh/plugins/docker/_docker https://raw.githubusercontent.com/
 ( \
   cd ~/ && \
   git init && \
-  git remote add origin git@github.com:darrenchang/dotfiles.git && \
+  git remote set-url origin https://github.com/darrenchang/dotfiles.git
+  git remote set-url --push origin git@github.com:darrenchang/dotfiles.git
   git checkout -b main && \
   git pull origin main && \
   git branch --set-upstream-to=origin/main main; \
